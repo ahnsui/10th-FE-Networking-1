@@ -1,0 +1,13 @@
+/* body */
+body {
+  width: 1280px;
+  height: 720px;
+  margin: 0 auto;
+}
+
+/* container */
+#container {
+  width: 930px;
+  height: 100%;
+  margin: 0 auto;
+}
