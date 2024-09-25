@@ -8,7 +8,7 @@
     ├── assets
     ├── components
     ├── pages
-    ├── css
-    ├── utils
+    ├── styles
+    ├── util
     ├── fonts
 ```
