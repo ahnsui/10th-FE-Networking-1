@@ -15,14 +15,25 @@
         <div id="dateWrapper"></div>
       </header>
 
-      <section class="newsBarWrapper"></section>
-      <div class="contentHeader"></div>
-      <section class="newsThumbWrapper"></section>
+      <section class="newsBarWrapper">
+        <article class="newsBar"></article>
+        <article class="newsBar"></article>
+      </section>
+
+      <div id="contentHeader">
+        <div id="tabWrapper"></div>
+        <div id="viewerWrapper"></div>
+      </div>
+
+      <section id="newsListWrapper">
+        <div id="fieldTabWrapper"></div>
+        <div id="pressNews">
+          <article id="pressInfo"></article>
+          <article id="news"></article>
+        </div>
+      </section>
     </div>
 
-    <script type="module">
-      import header from "./src/components/header.js";
-      header();
-    </script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

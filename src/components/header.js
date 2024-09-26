@@ -5,7 +5,7 @@ const header = () => {
   const dateWrapper = document.getElementById("dateWrapper");
 
   const imgIcon = document.createElement("img");
-  imgIcon.src = "src/assets/newspaper.png";
+  imgIcon.src = "src/assets/icon/newspaper.png";
   imgIcon.alt = "Newspaper Icon";
   iconTitleWrapper.appendChild(imgIcon);
 
