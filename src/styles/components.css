@@ -161,6 +161,7 @@
   gap: 8px;
   flex-shrink: 0;
   background: var(--surface-surface-brand-alt, #7890e7);
+  border: none;
 
   color: var(--text-text-white-default, #fff);
 
