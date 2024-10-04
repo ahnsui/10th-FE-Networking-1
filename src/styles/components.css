@@ -19,7 +19,7 @@
 }
 
 #iconTitleWrapper h2 {
-  color: var(--text-text-strong, #14212b);
+  color: #14212b;
 
   /* display-bold24 */
   font-family: "Pretendard Variable";
@@ -31,7 +31,7 @@
 }
 
 #dateWrapper h3 {
-  color: var(--text-text-default, #5f6e76);
+  color: #5f6e76;
 
   /* display-medium16 */
   font-family: "Pretendard Variable";
@@ -75,7 +75,7 @@
 }
 
 #tabWrapper button {
-  color: var(--text-text-strong, #14212b);
+  color: #14212b;
 
   /* selected-bold16 */
   font-family: "Pretendard Variable";
@@ -111,8 +111,8 @@
   height: 8px;
   padding: 16px 0px;
   align-items: center;
-  border: 1px solid var(--border-border-default, #d2dae0);
-  background: var(--surface-surface-alt, #f5f7f9);
+  border: 1px solid #d2dae0;
+  background-color: #f5f7f9;
 }
 
 #category_0 {
@@ -121,7 +121,7 @@
   padding: 0px 16px;
   align-items: center;
   gap: 8px;
-  color: var(--text-text-weak, #879298);
+  color: #879298;
 
   /* available-medium14 */
   font-family: "Pretendard Variable";
@@ -138,7 +138,7 @@
   align-items: center;
   gap: 8px;
 
-  color: var(--text-text-weak, #879298);
+  color: #879298;
 
   /* available-medium14 */
   font-family: "Pretendard Variable";
@@ -160,10 +160,10 @@
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-  background: var(--surface-surface-brand-alt, #7890e7);
+  background-color: #7890e7;
   border: none;
 
-  color: var(--text-text-white-default, #fff);
+  color: #fff;
 
   /* selected-bold14 */
   font-family: "Pretendard Variable";
@@ -181,7 +181,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  border: 1px solid var(--border-border-default, #d2dae0);
+  border: 1px solid #d2dae0;
 }
 
 #pressInfo {
