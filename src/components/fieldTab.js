@@ -20,7 +20,7 @@ const fieldTab = () => {
   for (let i = 0; i < categoryList.length; i++) {
     const categoryBtn = document.createElement("button");
     const countText = document.createElement("div");
-    countText.innerHTML = presentNum + "/" + entireNum;
+    countText.innerHTML = `${presentNum} / ${entireNum}`;
     countText.id = "countText";
 
     categoryBtn.innerHTML = `${categoryList[i].name}`;
