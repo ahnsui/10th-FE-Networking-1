@@ -48,15 +48,40 @@
   align-items: flex-start;
   gap: 8px;
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
-.newsBar {
+#newsBar1,
+#newsBar2 {
   display: flex;
   padding: 16px;
   align-items: flex-start;
   gap: 16px;
   flex: 1 0 0;
-  background-color: #ede8dc;
+
+  border: 1px solid #d2dae0;
+  background-color: #f5f7f9;
+
+  /* display-bold14 */
+  font-family: "Pretendard Variable";
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+
+  color: #4b5966;
+}
+
+#newsCompany {
+  color: #14212b;
+  font-weight: 700;
+}
+
+#newsBarTitle {
+  font-weight: 500;
+}
+
+#newsBarTitle:hover {
+  text-decoration-line: underline;
 }
 
 /* contentHeader */
@@ -116,6 +141,8 @@
 }
 
 #categoryBtn {
+  cursor: pointer;
+
   display: flex;
   height: 40px;
   padding: 0px 16px;
