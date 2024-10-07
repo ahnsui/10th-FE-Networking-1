@@ -14,12 +14,18 @@ const fieldTab = () => {
   const buttonList = [];
 
   let selectedCategoryId = 0;
+  let presentNum = 1;
+  let entireNum = 81;
 
   for (let i = 0; i < categoryList.length; i++) {
     const categoryBtn = document.createElement("button");
+    const countText = document.createElement("div");
+    countText.innerHTML = presentNum + "/" + entireNum;
+    countText.id = "countText";
+
     categoryBtn.innerHTML = `${categoryList[i].name}`;
-    if (i == 0) {
-      categoryBtn.id = "categoryBtn_0";
+    if (i === 0) {
+      categoryBtn.id = "categoryBtn_selected";
     } else {
       categoryBtn.id = "categoryBtn";
     }
@@ -36,6 +42,7 @@ const fieldTab = () => {
       });
     };
     fieldTabWrapper.appendChild(categoryBtn);
+    categoryBtn.appendChild(countText);
   }
 };
 

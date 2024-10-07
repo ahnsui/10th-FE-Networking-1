@@ -115,22 +115,6 @@
   background-color: #f5f7f9;
 }
 
-#category_0 {
-  display: flex;
-  height: 40px;
-  padding: 0px 16px;
-  align-items: center;
-  gap: 8px;
-  color: #879298;
-
-  /* available-medium14 */
-  font-family: "Pretendard Variable";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-
 #categoryBtn {
   display: flex;
   height: 40px;
@@ -151,9 +135,13 @@
   border: none;
 }
 
-#categoryBtn_0,
+#categoryBtn #countText {
+  display: none;
+}
+
 #categoryBtn_selected {
   display: flex;
+  justify-content: space-between;
   width: 166px;
   height: 40px;
   padding: 0px 16px;
@@ -168,6 +156,17 @@
   /* selected-bold14 */
   font-family: "Pretendard Variable";
   font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#categoryBtn_selected #countText {
+  color: #fff;
+
+  /* display-bold12 */
+  font-family: "Pretendard Variable";
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
