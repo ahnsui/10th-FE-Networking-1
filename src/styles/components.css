@@ -33,12 +33,11 @@
 #dateWrapper h3 {
   color: #5f6e76;
 
-  /* display-medium16 */
   font-family: "Pretendard Variable";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px; /* 137.5% */
+  line-height: 22px;
   margin: 0;
 }
 
@@ -64,7 +63,6 @@
 }
 
 .newsBarWrapper ul {
-  /* display-bold14 */
   font-family: "Pretendard Variable";
   font-size: 14px;
   font-style: normal;
@@ -128,7 +126,6 @@
 #tabWrapper button {
   color: #14212b;
 
-  /* selected-bold16 */
   font-family: "Pretendard Variable";
   font-size: 16px;
   font-style: normal;
@@ -166,63 +163,79 @@
   background-color: #f5f7f9;
 }
 
-#categoryBtn {
-  cursor: pointer;
-
+#categoryWrapper {
   display: flex;
   height: 40px;
   padding: 0px 16px;
   align-items: center;
   gap: 8px;
+  transition: all 0.4s ease;
+}
+
+#categoryBtn {
+  cursor: pointer;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 
   color: #879298;
 
-  /* available-medium14 */
   font-family: "Pretendard Variable";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
-  background: none;
-  border: none;
 }
 
-#categoryBtn #countText {
+#categoryWrapper #countText {
   display: none;
 }
 
-#categoryBtn_selected {
+#categoryWrapper_selected {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  width: 166px;
+  width: 134px;
   height: 40px;
   padding: 0px 16px;
   align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
+
   background-color: #7890e7;
-  border: none;
-
-  color: #fff;
-
-  /* selected-bold14 */
-  font-family: "Pretendard Variable";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
-#categoryBtn_selected #countText {
-  color: #fff;
+#categoryWrapper_selected #categoryBtn {
+  width: 100%;
+  z-index: 10;
+  justify-content: space-between;
+  flex-shrink: 0;
 
-  /* display-bold12 */
-  font-family: "Pretendard Variable";
-  font-size: 12px;
-  font-style: normal;
+  color: #fff;
   font-weight: 700;
-  line-height: normal;
+}
+
+#progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #4362d0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes progress-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+#categoryWrapper_selected #progress {
+  opacity: 1;
+  animation: progress-anim 2s 0s ease 5;
 }
 
 #pressNews {

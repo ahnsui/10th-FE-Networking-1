@@ -11,37 +11,46 @@ const fieldTab = () => {
     { id: 6, name: "지역" },
   ];
 
-  const buttonList = [];
+  const WrapperList = [];
 
   let selectedCategoryId = 0;
   let presentNum = 1;
-  let entireNum = 81;
+  let entireNum = 5;
 
   for (let i = 0; i < categoryList.length; i++) {
+    const categoryWrapper = document.createElement("div");
+
     const categoryBtn = document.createElement("button");
+    categoryBtn.id = "categoryBtn";
+
     const countText = document.createElement("div");
     countText.innerHTML = `${presentNum} / ${entireNum}`;
     countText.id = "countText";
 
+    const progress = document.createElement("div");
+    progress.id = "progress";
+
     categoryBtn.innerHTML = `${categoryList[i].name}`;
     if (i === 0) {
-      categoryBtn.id = "categoryBtn_selected";
+      categoryWrapper.id = "categoryWrapper_selected";
     } else {
-      categoryBtn.id = "categoryBtn";
+      categoryWrapper.id = "categoryWrapper";
     }
-    buttonList.push(categoryBtn);
+    WrapperList.push(categoryWrapper);
 
-    categoryBtn.onclick = () => {
+    categoryWrapper.onclick = () => {
       selectedCategoryId = categoryList[i].id;
-      categoryBtn.id = "categoryBtn_selected";
+      categoryWrapper.id = "categoryWrapper_selected";
 
-      buttonList.forEach((btn, index) => {
+      WrapperList.forEach((wrap, index) => {
         if (index !== i) {
-          btn.id = "categoryBtn";
+          wrap.id = "categoryWrapper";
         }
       });
     };
-    fieldTabWrapper.appendChild(categoryBtn);
+
+    fieldTabWrapper.appendChild(categoryWrapper);
+    categoryWrapper.append(categoryBtn, progress);
     categoryBtn.appendChild(countText);
   }
 };
