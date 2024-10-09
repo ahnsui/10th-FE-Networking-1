@@ -15,7 +15,7 @@ const fieldTab = () => {
 
   let selectedCategoryId = 0;
   let presentNum = 1;
-  let entireNum = 5;
+  let entireNum = 81;
 
   for (let i = 0; i < categoryList.length; i++) {
     const categoryWrapper = document.createElement("div");

@@ -235,7 +235,7 @@
 
 #categoryWrapper_selected #progress {
   opacity: 1;
-  animation: progress-anim 2s 0s ease 5;
+  animation: progress-anim 20s 0s ease 5;
 }
 
 #pressNews {
