@@ -42,16 +42,30 @@ const fieldTab = () => {
       selectedCategoryId = categoryList[i].id;
       categoryWrapper.id = "categoryWrapper_selected";
 
-      WrapperList.forEach((wrap, index) => {
-        if (index !== i) {
+      WrapperList.forEach((wrap, idx) => {
+        const categoryBtn = wrap.querySelector("#categoryBtn");
+        const countText = wrap.querySelector("#countText");
+        const progress = wrap.querySelector("#progress");
+        if (idx !== i) {
           wrap.id = "categoryWrapper";
+          if (countText) {
+            categoryBtn.removeChild(countText);
+          }
+          if (progress) {
+            wrap.removeChild(progress);
+          }
         }
       });
+
+      categoryBtn.appendChild(countText); //아마 selectedCategoryId 이용해서 해당 뉴스 개수 가져올 듯..
+      categoryWrapper.append(progress);
     };
 
+    if (categoryWrapper.id === "categoryWrapper_selected") {
+      categoryBtn.appendChild(countText);
+    }
     fieldTabWrapper.appendChild(categoryWrapper);
     categoryWrapper.append(categoryBtn, progress);
-    categoryBtn.appendChild(countText);
   }
 };
 

@@ -87,12 +87,12 @@
 
 .newsBarWrapper li.prev {
   top: 60px;
-  transition: top 0.5s ease;
+  transition: top 1s ease;
 }
 
 .newsBarWrapper li.current {
   top: 16px;
-  transition: top 0.5s ease;
+  transition: top 1s ease;
 }
 
 .newsBarWrapper li.next {
@@ -188,6 +188,10 @@
   line-height: normal;
 }
 
+#categoryWrapper #categoryBtn:hover {
+  text-decoration: underline;
+}
+
 #categoryWrapper #countText {
   display: none;
 }
@@ -235,7 +239,7 @@
 
 #categoryWrapper_selected #progress {
   opacity: 1;
-  animation: progress-anim 20s 0s ease 5;
+  animation: progress-anim 20s 0s ease 81;
 }
 
 #pressNews {
