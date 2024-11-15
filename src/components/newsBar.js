@@ -9,7 +9,6 @@ const newsBar = () => {
     .then((response) => response.json())
     .then((json) => {
       rollingNewsList1 = json;
-      console.log("뉴스리스트 1: ", rollingNewsList1);
       renderNewsBar(newsBar1, rollingNewsList1);
     })
     .catch((err) => {
@@ -20,7 +19,6 @@ const newsBar = () => {
     .then((response) => response.json())
     .then((json) => {
       rollingNewsList2 = json;
-      console.log("뉴스리스트 2: ", rollingNewsList2);
       renderNewsBar(newsBar2, rollingNewsList2);
     })
     .catch((err) => {

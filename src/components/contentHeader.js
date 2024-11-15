@@ -1,13 +1,51 @@
 const contentHeader = () => {
   const tabWrapper = document.getElementById("tabWrapper");
   const viewerWrapper = document.getElementById("viewerWrapper");
+  const allNewsList = document.querySelector(".newsListWrapper.all");
+  const myNewsList = document.querySelector(".newsListWrapper.my");
 
-  const tab1 = document.createElement("button");
-  tab1.innerHTML = "전체 언론사";
+  console.log(allNewsList);
+  console.log(myNewsList);
 
-  const tab2 = document.createElement("button");
-  tab2.innerHTML = "내가 구독한 언론사";
-  tabWrapper.append(tab1, tab2);
+  let menuList = [
+    {
+      id: 0,
+      isClicked: true,
+      title: "전체 언론사",
+    },
+    { id: 1, isClicked: false, title: "내가 구독한 언론사" },
+  ];
+
+  const render = () => {
+    tabWrapper.innerHTML = "";
+
+    menuList.map((menu, idx) => {
+      const tab = document.createElement("button");
+      tab.innerHTML = menu.title;
+      tab.className = menu.isClicked ? "tab active" : "tab";
+      tab.id = menu.id;
+      tab.onclick = onClickMenuBtn;
+      tabWrapper.appendChild(tab);
+    });
+  };
+
+  const onClickMenuBtn = (e) => {
+    const selectedId = Number(e.target.id);
+    if (selectedId === 0) {
+      myNewsList.classList.remove("active");
+      allNewsList.classList.add("active");
+    } else {
+      myNewsList.classList.add("active");
+      allNewsList.classList.remove("active");
+    }
+    menuList = menuList.map((list) => ({
+      ...list,
+      isClicked: selectedId === list.id,
+    }));
+    render();
+  };
+
+  render();
 
   const viewer1 = document.createElement("img");
   viewer1.src = "src/assets/icon/listview.png";

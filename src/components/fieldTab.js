@@ -1,5 +1,5 @@
 const fieldTab = () => {
-  const fieldTabWrapper = document.getElementById("fieldTabWrapper");
+  const fieldTabWrapper = document.querySelector(".fieldTabWrapper.all");
 
   const categoryList = [
     { id: 0, name: "종합/경제" },
